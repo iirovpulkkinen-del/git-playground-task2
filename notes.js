@@ -42,6 +42,7 @@ function main() {
     case "delete": {
       const id = Number(rest[0]);
       const ok = store.remove(id);
+      const change = store.save(note);
       console.log(ok ? `Deleted note #${id}` : `No note #${id} found`);
       break;
     }
